@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+
+  # сервис приложения
+  fast_api_app: 
+    build: .
+    env_file: "randomuser.env"
+    depends_on:
+      pg_randomuser:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: >
+      sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"
+    networks:
+      randomuser_network:
+        aliases: [fast_api_app]
+
+
+  # База данных
+  pg_randomuser:
+    image: postgres:latest
+    container_name: pg_randomuser
+    env_file: "postgres.env"
+    ports:
+      - "5432:5432"
+    volumes:
+      - "pg_randomuser_data:/var/lib/postgresql/data"
+    healthcheck:
+      test: [ "CMD-SHELL", "psql -U $${POSTGRES_USER} -d $${POSTGRES_DB} -c 'SELECT 1' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      randomuser_network:
+        aliases: [pg_randomuser]
+    
+
+
+volumes:
+  pg_randomuser_data:
+    driver: local
+
+networks:
+  randomuser_network:
+    name: randomuser_network
