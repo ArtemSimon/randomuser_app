@@ -7,3 +7,4 @@ __pycache__/
 postgres.env
 ./nginx.conf
 ./public
+./app/static
