@@ -23,6 +23,7 @@ WORKDIR /app
 # Копируем venv из builder
 COPY --from=builder /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
+RUN apt-get update && apt-get install -y curl
 
 COPY . .
 
