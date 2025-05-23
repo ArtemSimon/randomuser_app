@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link href="/static/css/static.css" rel="stylesheet">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="{{ user.picture_thumbnail }}" alt="Аватар" class="profile-avatar">
+            <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+        </div>
+        
+        <div class="profile-details">
+            <div class="detail-row">
+                <span class="detail-label">Email:</span>
+                <span class="detail-value">{{ user.email }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Телефон:</span>
+                <span class="detail-value">{{ user.phone }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Адрес:</span>
+                <span class="detail-value">
+                    {{ user.street }}, {{ user.city }}, {{ user.country }}
+                </span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Пол:</span>
+                <span class="detail-value">
+                    {% if user.gender == 'male' %}Male{% else %}Female{% endif %}
+                </span>
+            </div>
+        </div>
+        
+        <a href="/" class="back-link">← Назад к списку</a>
+    </div>
+</body>
+</html>
