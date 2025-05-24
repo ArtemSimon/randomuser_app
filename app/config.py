@@ -11,9 +11,14 @@ class Settings(BaseSettings):
     DB_USER: str
     DB_PASSWORD: str
 
-    class Config:
-        env_file = 'randomuser.env'
-    
+    model_config = SettingsConfigDict(
+        env_file= 'randomuser.env',
+        env_file_encoding= 'utf-8'
+    )
+
+
+
+
 settings = Settings()
 
 def get_db_url():
