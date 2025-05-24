@@ -6,8 +6,13 @@ class SUserResponse(BaseModel):
     last_name: str
     email: str
     phone: str
-    address: str
+    street: str
+    city: str
+    state: str
+    country: str
+    postcode: str
     profile_url: str
+    picture_thumbnail: str
 
     class Config:
         orm_mode = True
