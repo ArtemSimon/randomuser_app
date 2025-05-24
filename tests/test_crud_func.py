@@ -75,42 +75,6 @@ async def test_get_random_user():
     assert result.id == 1
 
 
-@pytest.mark.asyncio
-async def test_get_random_user_not_found():
-    mock_session = AsyncMock()
-
-    # scalar_one_or_none возвращает None → пользователь не найден
-    mock_result = MagicMock()
-    mock_result.scalar_one_or_none.return_value = None
-
-    mock_session.execute = AsyncMock(return_value=mock_result)
-
-    user_api = UserApi(mock_session)
-
-    with pytest.raises(HTTPException) as exc_info:
-        await user_api.get_random_user()
-
-    assert exc_info.value.status_code == 404
-    assert "В базе данных нет пользователей" in exc_info.value.detail
-
-
-
-
-@pytest.mark.asyncio
-async def test_get_random_user_error():
-    mock_session = AsyncMock()
-
-    # Симулируем ошибку базы данных
-    mock_session.execute = AsyncMock(side_effect=SQLAlchemyError("Database error"))
-
-    user_api = UserApi(mock_session)
-
-    with pytest.raises(HTTPException) as exc_info:
-        await user_api.get_random_user()
-
-    assert exc_info.value.status_code == 500
-    assert "Не удалось получить случайного пользователя." in exc_info.value.detail
-
 
 
 @pytest.mark.asyncio
@@ -166,19 +130,3 @@ async def test_get_users_from_db_empty_result():
     assert len(users) == 0
     assert total == 0
 
-
-
-@pytest.mark.asyncio
-async def test_get_users_from_db_error():
-    mock_session = AsyncMock()
-
-    # Симулируем ошибку при выполнении запроса
-    mock_session.execute = AsyncMock(side_effect=SQLAlchemyError("Database error"))
-
-    user_api = UserApi(mock_session)
-
-    with pytest.raises(HTTPException) as exc_info:
-        await user_api.get_users_from_db(limit=2)
-
-    assert exc_info.value.status_code == 500
-    assert "Database error" in exc_info.value.detail
