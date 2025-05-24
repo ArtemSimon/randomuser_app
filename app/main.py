@@ -1,3 +1,4 @@
+from contextlib import asynccontextmanager
 from app.api.router import router as router_randomuser
 from app.database import create_tables
 from app.api.crud import UserApi
@@ -9,7 +10,21 @@ from fastapi.staticfiles import StaticFiles
 from fastapi import FastAPI,Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 
-app= FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Код, который выполняется при запуске приложения
+    await create_tables()
+    async with async_session_maker() as session:
+        start_app = UserApi(session)
+        await start_app.async_load_user(1000)
+
+    # Приложение работает
+    yield
+
+
+
+app= FastAPI(lifespan=lifespan)
+
 app.include_router(router_randomuser)
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
@@ -19,19 +34,14 @@ templates = Jinja2Templates(directory="app/templates")
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     """Главная страница"""
-    return templates.TemplateResponse(
-        "base.html",
-        {
-            "request": request,
-            "title": "Главная страница",
-            "message": "Добро пожаловать!"
-        }
-    )
+    return templates.TemplateResponse(request, "base.html")
 
 
-@app.on_event("startup")
-async def on_startup():
-    await create_tables()
-    async with async_session_maker() as session:
-        start_app = UserApi(session)
-        await start_app.async_load_user(1000)
+# @app.on_event("startup")
+# async def on_startup():
+#     await create_tables()
+#     async with async_session_maker() as session:
+#         start_app = UserApi(session)
+#         await start_app.async_load_user(1000)
+
+
