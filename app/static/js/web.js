@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const loadingIndicator = document.getElementById('loading');
 
     let currentPage = 1;
-    const perPage = 50;
+    const perPage = 100; // количество людей на странице 
     let allUsers = [];
 
     // Загрузка данных при старте
