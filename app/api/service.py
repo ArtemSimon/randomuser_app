@@ -1,25 +1,67 @@
 import asyncio
+import json
 import math
 
-from fastapi import Depends
+from fastapi import Depends, HTTPException
 from app.api.models import User
 from app.database import get_async_session
 from sqlalchemy.ext.asyncio import AsyncSession
 import httpx
 from typing import AsyncGenerator, List
 import uuid
+from app.config import logger
 
 """Асинхронный генератор, который загружает пользователей порциями"""
 async def fetch_random_users(count: int, page: int = 1) -> AsyncGenerator[List[dict], None]:
-    async with httpx.AsyncClient() as client:
-        params = {
-        "results": count,
-        "page": page
-    }
+
+    try:
+        logger.debug(f"Starting to fetch {count} random users, page {page}")
+
+        async with httpx.AsyncClient() as client:
+            params = {
+            "results": count,
+            "page": page
+        }
+            
+        async with httpx.AsyncClient() as client:
+            logger.debug(f"Making request to randomuser.me with params: {params}")
+            response = await client.get("https://randomuser.me/api/", params=params)
+            response.raise_for_status()
+
+            logger.info(f"Successfully fetched {count} users from API, page {page}")
+            logger.debug(f"Response status: {response.status_code}")
+
+            return response.json()
         
-    async with httpx.AsyncClient() as client:
-        response = await client.get("https://randomuser.me/api/", params=params)
-        return response.json()
+    except httpx.HTTPStatusError as e:
+        logger.error(
+            f"API returned error status: {e.response.status_code} "
+            f"when fetching {count} users, page {page}. Error: {str(e)}"
+        )
+        raise HTTPException(
+            status_code=502,
+            detail="Bad response from randomuser API"
+        )
+    
+    except httpx.RequestError as e:
+        logger.error(
+            f"Network error while fetching users: {str(e)}",
+            exc_info=True
+        )
+        raise HTTPException(
+            status_code=503,
+            detail="Failed to connect to randomuser API"
+        )
+    
+    except json.JSONDecodeError as e:
+        logger.error(
+            f"Failed to parse API response for {count} users, page {page}: {str(e)}",
+            exc_info=True
+        )
+        raise HTTPException(
+            status_code=500,
+            detail="Invalid response format from API"
+        )
 
 """Парсинг данных API -> User модель"""
 async def parse_user(user_data: dict) -> User:

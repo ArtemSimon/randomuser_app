@@ -5,10 +5,17 @@ from app.api.models import Base
 from app.config import get_db_url
 from sqlalchemy.ext.asyncio import create_async_engine,async_sessionmaker,AsyncSession
 from typing import AsyncGenerator
+from app.config import logger
 
 DATA_BASE_URL = get_db_url()
 
-engine = create_async_engine(DATA_BASE_URL)
+
+try:
+    engine = create_async_engine(DATA_BASE_URL)
+    logger.info('Database engine created successfully')
+except Exception as e:
+    logger.error(f'Database connecting error: {str(e)}')
+    raise
 
 async_session_maker = async_sessionmaker(engine,expire_on_commit=False)
 

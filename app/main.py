@@ -9,14 +9,17 @@ from fastapi.staticfiles import StaticFiles
 
 from fastapi import FastAPI,Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession
+from app.config import logger
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Код, который выполняется при запуске приложения
+    logger.info('Starting app')
     await create_tables()
     async with async_session_maker() as session:
         start_app = UserApi(session)
         await start_app.async_load_user(1000)
+        logger.info('Loading 1000 users completed')
 
     # Приложение работает
     yield
@@ -35,13 +38,3 @@ templates = Jinja2Templates(directory="app/templates")
 async def read_root(request: Request):
     """Главная страница"""
     return templates.TemplateResponse(request, "base.html")
-
-
-# @app.on_event("startup")
-# async def on_startup():
-#     await create_tables()
-#     async with async_session_maker() as session:
-#         start_app = UserApi(session)
-#         await start_app.async_load_user(1000)
-
-
