@@ -11,7 +11,7 @@ load_dotenv()
 
 def set_logging():
     logger = logging.getLogger('randomuser')
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
 
     # Создаем папку для логов, если её нет
     logs_dir = Path("logs")
@@ -25,12 +25,12 @@ def set_logging():
     
     # Логгер для FastAPI
     logger = logging.getLogger("uvicorn")
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
     
     # Консольный вывод
     console_handler = logging.StreamHandler()
     console_handler.setFormatter(formatter)
-    console_handler.setLevel(logging.DEBUG) 
+    console_handler.setLevel(logging.INFO) 
     logger.addHandler(console_handler)
     
     # Файловый вывод (с ротацией)
