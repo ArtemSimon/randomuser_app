@@ -1,0 +1,474 @@
+2025-05-24 17:54:45 - INFO - uvicorn - Database engine created successfully
+2025-05-24 17:54:45 - INFO - uvicorn.error - Started server process [7]
+2025-05-24 17:54:45 - INFO - uvicorn.error - Waiting for application startup.
+2025-05-24 17:54:45 - INFO - uvicorn - Starting app
+2025-05-24 17:54:47 - INFO - uvicorn.error - Application startup complete.
+2025-05-24 17:54:47 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-05-24 18:13:17 - INFO - uvicorn - Database engine created successfully
+2025-05-24 18:13:17 - INFO - uvicorn.error - Started server process [7]
+2025-05-24 18:13:17 - INFO - uvicorn.error - Waiting for application startup.
+2025-05-24 18:13:17 - INFO - uvicorn - Starting app
+2025-05-24 18:13:17 - ERROR - uvicorn.error - Traceback (most recent call last):
+  File "/app/app/api/crud.py", line 22, in async_load_user
+    logger.info(f"Starting user loading process. Total: {total}, batch size: {batch_size}")
+AttributeError: module 'fastapi.logger' has no attribute 'info'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/api/crud.py", line 68, in async_load_user
+    logger.critical(f"Critical error in user loading process: {str(global_error)}")
+AttributeError: module 'fastapi.logger' has no attribute 'critical'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/api/crud.py", line 80, in async_load_user
+    logger.debug("Database session closed")
+AttributeError: module 'fastapi.logger' has no attribute 'debug'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/starlette/routing.py", line 692, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/local/lib/python3.10/contextlib.py", line 199, in __aenter__
+    return await anext(self.gen)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/routing.py", line 133, in merged_lifespan
+    async with original_context(app) as maybe_original_state:
+  File "/usr/local/lib/python3.10/contextlib.py", line 199, in __aenter__
+    return await anext(self.gen)
+  File "/app/app/main.py", line 21, in lifespan
+    await start_app.async_load_user(1000)
+  File "/app/app/api/crud.py", line 82, in async_load_user
+    logger.error(f"Error closing session: {str(close_error)}")
+AttributeError: module 'fastapi.logger' has no attribute 'error'
+
+2025-05-24 18:13:17 - ERROR - uvicorn.error - Application startup failed. Exiting.
+2025-05-24 18:13:53 - INFO - uvicorn - Database engine created successfully
+2025-05-24 18:13:53 - INFO - uvicorn.error - Started server process [7]
+2025-05-24 18:13:53 - INFO - uvicorn.error - Waiting for application startup.
+2025-05-24 18:13:53 - INFO - uvicorn - Starting app
+2025-05-24 18:13:53 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-05-24 18:13:54 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-05-24 18:13:55 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-05-24 18:13:55 - INFO - uvicorn - Loading 1000 users completed
+2025-05-24 18:13:55 - INFO - uvicorn.error - Application startup complete.
+2025-05-24 18:13:55 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-05-24 18:14:59 - INFO - uvicorn - Starting user loading process. Total: 123, batch size: 5000
+2025-05-24 18:15:00 - INFO - uvicorn - Successfully fetched page 1: 123 users
+2025-05-24 18:15:00 - INFO - uvicorn - User loading completed. Total added: 123
+2025-05-24 18:15:45 - INFO - uvicorn - Starting user loading process. Total: 10000, batch size: 5000
+2025-05-24 18:15:49 - INFO - uvicorn - Successfully fetched page 1: 5000 users
+2025-05-24 18:15:59 - INFO - uvicorn - Successfully fetched page 2: 5000 users
+2025-05-24 18:16:06 - INFO - uvicorn - User loading completed. Total added: 10000
+2025-05-24 18:42:38 - INFO - uvicorn - Database engine created successfully
+2025-05-24 18:42:38 - INFO - uvicorn.error - Started server process [7]
+2025-05-24 18:42:38 - INFO - uvicorn.error - Waiting for application startup.
+2025-05-24 18:42:38 - INFO - uvicorn - Starting app
+2025-05-24 18:42:38 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-05-24 18:42:40 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-05-24 18:42:40 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-05-24 18:42:42 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-05-24 18:42:42 - INFO - uvicorn - Loading 1000 users completed
+2025-05-24 18:42:42 - INFO - uvicorn.error - Application startup complete.
+2025-05-24 18:42:42 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-05-24 18:42:58 - INFO - uvicorn - Successfully fetched 100/11000 users
+2025-05-24 18:43:08 - INFO - uvicorn - Successfully fetched random user ID: 6569
+2025-05-24 18:43:25 - INFO - uvicorn - Successfully fetched 100/11000 users
+2025-05-24 18:43:26 - INFO - uvicorn - Successfully fetched random user ID: 6819
+2025-05-24 18:43:32 - INFO - uvicorn - Successfully fetched 100/11000 users
+2025-05-24 18:45:38 - INFO - uvicorn - Successfully fetched random user ID: 5491
+2025-05-24 18:50:15 - INFO - uvicorn - Database engine created successfully
+2025-05-24 18:50:15 - INFO - uvicorn.error - Started server process [7]
+2025-05-24 18:50:15 - INFO - uvicorn.error - Waiting for application startup.
+2025-05-24 18:50:15 - INFO - uvicorn - Starting app
+2025-05-24 18:50:15 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-05-24 18:50:17 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-05-24 18:50:17 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-05-24 18:50:18 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-05-24 18:50:18 - INFO - uvicorn - Loading 1000 users completed
+2025-05-24 18:50:18 - INFO - uvicorn.error - Application startup complete.
+2025-05-24 18:50:18 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-05-24 18:50:32 - INFO - uvicorn - Successfully fetched 100/12000 users
+2025-05-24 18:50:42 - INFO - uvicorn - Successfully fetched random user ID: 94
+2025-05-24 18:51:43 - INFO - uvicorn - Database engine created successfully
+2025-05-24 18:51:43 - INFO - uvicorn.error - Started server process [7]
+2025-05-24 18:51:43 - INFO - uvicorn.error - Waiting for application startup.
+2025-05-24 18:51:43 - INFO - uvicorn - Starting app
+2025-05-24 18:51:43 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-05-24 18:51:43 - DEBUG - uvicorn - Total pages to process: 1
+2025-05-24 18:51:43 - DEBUG - uvicorn - Processing page 1/1 with batch size 1000
+2025-05-24 18:51:43 - DEBUG - uvicorn - Starting to fetch 1000 random users, page 1
+2025-05-24 18:51:43 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1000, 'page': 1}
+2025-05-24 18:51:44 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-05-24 18:51:44 - DEBUG - uvicorn - Response status: 200
+2025-05-24 18:51:45 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-05-24 18:51:46 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 18:51:46 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-05-24 18:51:46 - DEBUG - uvicorn - Database session closed
+2025-05-24 18:51:46 - INFO - uvicorn - Loading 1000 users completed
+2025-05-24 18:51:46 - INFO - uvicorn.error - Application startup complete.
+2025-05-24 18:51:46 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-05-24 18:51:58 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 18:51:58 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 18:51:58 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 18:51:58 - INFO - uvicorn - Successfully fetched 100/13000 users
+2025-05-24 18:51:58 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 18:51:59 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 18:51:59 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 18:51:59 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 18:51:59 - INFO - uvicorn - Successfully fetched 100/13000 users
+2025-05-24 18:51:59 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 18:52:09 - INFO - uvicorn - Starting user loading process. Total: 1, batch size: 5000
+2025-05-24 18:52:09 - DEBUG - uvicorn - Total pages to process: 1
+2025-05-24 18:52:09 - DEBUG - uvicorn - Processing page 1/1 with batch size 1
+2025-05-24 18:52:09 - DEBUG - uvicorn - Starting to fetch 1 random users, page 1
+2025-05-24 18:52:09 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 1}
+2025-05-24 18:52:09 - INFO - uvicorn - Successfully fetched 1 users from API, page 1
+2025-05-24 18:52:09 - DEBUG - uvicorn - Response status: 200
+2025-05-24 18:52:09 - INFO - uvicorn - Successfully fetched page 1: 1 users
+2025-05-24 18:52:09 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 18:52:09 - INFO - uvicorn - User loading completed. Total added: 1
+2025-05-24 18:52:09 - DEBUG - uvicorn - Database session closed
+2025-05-24 18:52:51 - DEBUG - uvicorn - Trying to get user from ID: 1
+2025-05-24 18:52:51 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users 
+WHERE users.id = :id_1
+2025-05-24 18:52:51 - DEBUG - uvicorn - User successfully received: 1
+2025-05-24 18:54:04 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 18:54:04 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 18:54:04 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 18:54:04 - INFO - uvicorn - Successfully fetched 100/13001 users
+2025-05-24 18:54:04 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 19:09:04 - INFO - uvicorn - Database engine created successfully
+2025-05-24 19:09:04 - INFO - uvicorn.error - Started server process [7]
+2025-05-24 19:09:04 - INFO - uvicorn.error - Waiting for application startup.
+2025-05-24 19:09:04 - INFO - uvicorn - Starting app
+2025-05-24 19:09:04 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-05-24 19:09:04 - DEBUG - uvicorn - Total pages to process: 1
+2025-05-24 19:09:04 - DEBUG - uvicorn - Processing page 1/1 with batch size 1000
+2025-05-24 19:09:04 - DEBUG - uvicorn - Starting to fetch 1000 random users, page 1
+2025-05-24 19:09:04 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1000, 'page': 1}
+2025-05-24 19:09:09 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-05-24 19:09:09 - DEBUG - uvicorn - Response status: 200
+2025-05-24 19:09:09 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-05-24 19:09:10 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 19:09:10 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-05-24 19:09:10 - DEBUG - uvicorn - Database session closed
+2025-05-24 19:09:10 - INFO - uvicorn - Loading 1000 users completed
+2025-05-24 19:09:10 - INFO - uvicorn.error - Application startup complete.
+2025-05-24 19:09:10 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-05-24 19:09:30 - DEBUG - uvicorn - Trying to get user from ID: 2
+2025-05-24 19:09:30 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users 
+WHERE users.id = :id_1
+2025-05-24 19:09:30 - DEBUG - uvicorn - User successfully received: 2
+2025-05-24 19:11:04 - DEBUG - uvicorn - Trying to get user from ID: 1
+2025-05-24 19:11:04 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users 
+WHERE users.id = :id_1
+2025-05-24 19:11:04 - DEBUG - uvicorn - User successfully received: 1
+2025-05-24 19:11:36 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 19:11:36 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:11:36 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:11:36 - INFO - uvicorn - Successfully fetched 100/14001 users
+2025-05-24 19:11:36 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 19:11:41 - INFO - uvicorn - Starting user loading process. Total: 555, batch size: 5000
+2025-05-24 19:11:41 - DEBUG - uvicorn - Total pages to process: 1
+2025-05-24 19:11:41 - DEBUG - uvicorn - Processing page 1/1 with batch size 555
+2025-05-24 19:11:41 - DEBUG - uvicorn - Starting to fetch 555 random users, page 1
+2025-05-24 19:11:41 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 555, 'page': 1}
+2025-05-24 19:11:42 - INFO - uvicorn - Successfully fetched 555 users from API, page 1
+2025-05-24 19:11:42 - DEBUG - uvicorn - Response status: 200
+2025-05-24 19:11:42 - INFO - uvicorn - Successfully fetched page 1: 555 users
+2025-05-24 19:11:42 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 19:11:42 - INFO - uvicorn - User loading completed. Total added: 555
+2025-05-24 19:11:42 - DEBUG - uvicorn - Database session closed
+2025-05-24 22:20:05 - INFO - uvicorn - Database engine created successfully
+2025-05-24 22:20:05 - INFO - uvicorn - Starting user loading process. Total: 2, batch size: 1
+2025-05-24 22:20:05 - DEBUG - uvicorn - Total pages to process: 2
+2025-05-24 22:20:05 - DEBUG - uvicorn - Processing page 1/2 with batch size 1
+2025-05-24 22:20:05 - DEBUG - uvicorn - Starting to fetch 1 random users, page 1
+2025-05-24 22:20:06 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 1}
+2025-05-24 22:20:06 - INFO - uvicorn - Successfully fetched 1 users from API, page 1
+2025-05-24 22:20:06 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:20:06 - INFO - uvicorn - Successfully fetched page 1: 1 users
+2025-05-24 22:20:06 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 22:20:06 - DEBUG - uvicorn - Processing page 2/2 with batch size 1
+2025-05-24 22:20:06 - DEBUG - uvicorn - Starting to fetch 1 random users, page 2
+2025-05-24 22:20:06 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 2}
+2025-05-24 22:20:07 - INFO - uvicorn - Successfully fetched 1 users from API, page 2
+2025-05-24 22:20:07 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:20:07 - INFO - uvicorn - Successfully fetched page 2: 1 users
+2025-05-24 22:20:07 - DEBUG - uvicorn - Successfully committed page 2
+2025-05-24 22:20:07 - INFO - uvicorn - User loading completed. Total added: 2
+2025-05-24 22:20:07 - DEBUG - uvicorn - Database session closed
+2025-05-24 22:20:07 - DEBUG - uvicorn - Trying to get user from ID: 1
+2025-05-24 22:20:07 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users 
+WHERE users.id = :id_1
+2025-05-24 22:20:07 - DEBUG - uvicorn - User successfully received: 1
+2025-05-24 22:20:07 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:20:07 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:20:07 - INFO - uvicorn - Successfully fetched random user ID: 1
+2025-05-24 22:20:07 - DEBUG - uvicorn - User details - Email: None | Name: Artem As
+2025-05-24 22:20:07 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:20:07 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:20:07 - WARNING - uvicorn - No users found in database when fetching random user
+2025-05-24 22:20:07 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:20:07 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:20:07 - ERROR - uvicorn - Database error while fetching random user: Database error
+Traceback (most recent call last):
+  File "/home/artem/randomuser_app/app/api/crud.py", line 123, in get_random_user
+    result = await self.session.execute(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 2262, in _execute_mock_call
+    raise effect
+sqlalchemy.exc.SQLAlchemyError: Database error
+2025-05-24 22:20:07 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=0
+2025-05-24 22:20:07 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:20:07 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:20:07 - INFO - uvicorn - Successfully fetched 2/2 users
+2025-05-24 22:20:07 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 22:20:07 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=100
+2025-05-24 22:20:07 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:20:07 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:20:07 - INFO - uvicorn - Successfully fetched 0/0 users
+2025-05-24 22:20:07 - DEBUG - uvicorn - First user ID: <MagicMock name='mock.execute().scalars().all().__getitem__().id' id='139084142921536'>
+2025-05-24 22:20:07 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=0
+2025-05-24 22:20:07 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:20:07 - ERROR - uvicorn - Database error while fetching users (limit=2, offset=0): Database error
+Traceback (most recent call last):
+  File "/home/artem/randomuser_app/app/api/crud.py", line 155, in get_users_from_db
+    users_in_db = await self.session.execute(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 2262, in _execute_mock_call
+    raise effect
+sqlalchemy.exc.SQLAlchemyError: Database error
+2025-05-24 22:20:07 - DEBUG - uvicorn - Starting to fetch 10 random users, page 1
+2025-05-24 22:20:07 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 10, 'page': 1}
+2025-05-24 22:20:07 - INFO - uvicorn - Successfully fetched 10 users from API, page 1
+2025-05-24 22:20:07 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:22:13 - INFO - uvicorn - Database engine created successfully
+2025-05-24 22:23:07 - INFO - uvicorn - Database engine created successfully
+2025-05-24 22:23:21 - INFO - uvicorn - Database engine created successfully
+2025-05-24 22:23:21 - DEBUG - uvicorn - Starting to fetch 10 random users, page 1
+2025-05-24 22:23:21 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 10, 'page': 1}
+2025-05-24 22:23:21 - INFO - uvicorn - Successfully fetched 10 users from API, page 1
+2025-05-24 22:23:21 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:23:28 - INFO - uvicorn - Database engine created successfully
+2025-05-24 22:23:28 - INFO - uvicorn - Starting user loading process. Total: 2, batch size: 1
+2025-05-24 22:23:28 - DEBUG - uvicorn - Total pages to process: 2
+2025-05-24 22:23:28 - DEBUG - uvicorn - Processing page 1/2 with batch size 1
+2025-05-24 22:23:28 - DEBUG - uvicorn - Starting to fetch 1 random users, page 1
+2025-05-24 22:23:28 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 1}
+2025-05-24 22:23:28 - INFO - uvicorn - Successfully fetched 1 users from API, page 1
+2025-05-24 22:23:28 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:23:28 - INFO - uvicorn - Successfully fetched page 1: 1 users
+2025-05-24 22:23:28 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 22:23:28 - DEBUG - uvicorn - Processing page 2/2 with batch size 1
+2025-05-24 22:23:28 - DEBUG - uvicorn - Starting to fetch 1 random users, page 2
+2025-05-24 22:23:28 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 2}
+2025-05-24 22:23:29 - INFO - uvicorn - Successfully fetched 1 users from API, page 2
+2025-05-24 22:23:29 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:23:29 - INFO - uvicorn - Successfully fetched page 2: 1 users
+2025-05-24 22:23:29 - DEBUG - uvicorn - Successfully committed page 2
+2025-05-24 22:23:29 - INFO - uvicorn - User loading completed. Total added: 2
+2025-05-24 22:23:29 - DEBUG - uvicorn - Database session closed
+2025-05-24 22:23:29 - DEBUG - uvicorn - Trying to get user from ID: 1
+2025-05-24 22:23:29 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users 
+WHERE users.id = :id_1
+2025-05-24 22:23:29 - DEBUG - uvicorn - User successfully received: 1
+2025-05-24 22:23:29 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:23:29 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:23:29 - INFO - uvicorn - Successfully fetched random user ID: 1
+2025-05-24 22:23:29 - DEBUG - uvicorn - User details - Email: None | Name: Artem As
+2025-05-24 22:23:29 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:23:29 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:23:29 - WARNING - uvicorn - No users found in database when fetching random user
+2025-05-24 22:23:29 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:23:29 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:23:29 - ERROR - uvicorn - Database error while fetching random user: Database error
+Traceback (most recent call last):
+  File "/home/artem/randomuser_app/app/api/crud.py", line 123, in get_random_user
+    result = await self.session.execute(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 2262, in _execute_mock_call
+    raise effect
+sqlalchemy.exc.SQLAlchemyError: Database error
+2025-05-24 22:23:29 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=0
+2025-05-24 22:23:29 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:23:29 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:23:29 - INFO - uvicorn - Successfully fetched 2/2 users
+2025-05-24 22:23:29 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 22:23:29 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=100
+2025-05-24 22:23:29 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:23:29 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:23:29 - INFO - uvicorn - Successfully fetched 0/0 users
+2025-05-24 22:23:29 - DEBUG - uvicorn - First user ID: <MagicMock name='mock.execute().scalars().all().__getitem__().id' id='132338681620256'>
+2025-05-24 22:23:29 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=0
+2025-05-24 22:23:29 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:23:29 - ERROR - uvicorn - Database error while fetching users (limit=2, offset=0): Database error
+Traceback (most recent call last):
+  File "/home/artem/randomuser_app/app/api/crud.py", line 155, in get_users_from_db
+    users_in_db = await self.session.execute(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 2262, in _execute_mock_call
+    raise effect
+sqlalchemy.exc.SQLAlchemyError: Database error
+2025-05-24 22:23:29 - DEBUG - uvicorn - Starting to fetch 10 random users, page 1
+2025-05-24 22:23:29 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 10, 'page': 1}
+2025-05-24 22:23:29 - INFO - uvicorn - Successfully fetched 10 users from API, page 1
+2025-05-24 22:23:29 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:24:12 - INFO - uvicorn - Database engine created successfully
+2025-05-24 22:24:12 - INFO - uvicorn - Starting user loading process. Total: 2, batch size: 1
+2025-05-24 22:24:12 - DEBUG - uvicorn - Total pages to process: 2
+2025-05-24 22:24:12 - DEBUG - uvicorn - Processing page 1/2 with batch size 1
+2025-05-24 22:24:12 - DEBUG - uvicorn - Starting to fetch 1 random users, page 1
+2025-05-24 22:24:12 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 1}
+2025-05-24 22:24:12 - INFO - uvicorn - Successfully fetched 1 users from API, page 1
+2025-05-24 22:24:12 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:24:12 - INFO - uvicorn - Successfully fetched page 1: 1 users
+2025-05-24 22:24:12 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 22:24:12 - DEBUG - uvicorn - Processing page 2/2 with batch size 1
+2025-05-24 22:24:12 - DEBUG - uvicorn - Starting to fetch 1 random users, page 2
+2025-05-24 22:24:12 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 2}
+2025-05-24 22:24:13 - INFO - uvicorn - Successfully fetched 1 users from API, page 2
+2025-05-24 22:24:13 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:24:13 - INFO - uvicorn - Successfully fetched page 2: 1 users
+2025-05-24 22:24:13 - DEBUG - uvicorn - Successfully committed page 2
+2025-05-24 22:24:13 - INFO - uvicorn - User loading completed. Total added: 2
+2025-05-24 22:24:13 - DEBUG - uvicorn - Database session closed
+2025-05-24 22:24:13 - DEBUG - uvicorn - Trying to get user from ID: 1
+2025-05-24 22:24:13 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users 
+WHERE users.id = :id_1
+2025-05-24 22:24:13 - DEBUG - uvicorn - User successfully received: 1
+2025-05-24 22:24:13 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:24:13 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:24:13 - INFO - uvicorn - Successfully fetched random user ID: 1
+2025-05-24 22:24:13 - DEBUG - uvicorn - User details - Email: None | Name: Artem As
+2025-05-24 22:24:13 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:24:13 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:24:13 - WARNING - uvicorn - No users found in database when fetching random user
+2025-05-24 22:24:13 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:24:13 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:24:13 - ERROR - uvicorn - Database error while fetching random user: Database error
+Traceback (most recent call last):
+  File "/home/artem/randomuser_app/app/api/crud.py", line 123, in get_random_user
+    result = await self.session.execute(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 2262, in _execute_mock_call
+    raise effect
+sqlalchemy.exc.SQLAlchemyError: Database error
+2025-05-24 22:24:13 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=0
+2025-05-24 22:24:13 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:24:13 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:24:13 - INFO - uvicorn - Successfully fetched 2/2 users
+2025-05-24 22:24:13 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 22:24:13 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=100
+2025-05-24 22:24:13 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:24:13 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:24:13 - INFO - uvicorn - Successfully fetched 0/0 users
+2025-05-24 22:24:13 - DEBUG - uvicorn - First user ID: <MagicMock name='mock.execute().scalars().all().__getitem__().id' id='123428492146256'>
+2025-05-24 22:24:13 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=0
+2025-05-24 22:24:13 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:24:13 - ERROR - uvicorn - Database error while fetching users (limit=2, offset=0): Database error
+Traceback (most recent call last):
+  File "/home/artem/randomuser_app/app/api/crud.py", line 155, in get_users_from_db
+    users_in_db = await self.session.execute(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 2262, in _execute_mock_call
+    raise effect
+sqlalchemy.exc.SQLAlchemyError: Database error
+2025-05-24 22:25:12 - INFO - uvicorn - Database engine created successfully
+2025-05-24 22:25:13 - INFO - uvicorn - Starting user loading process. Total: 2, batch size: 1
+2025-05-24 22:25:13 - DEBUG - uvicorn - Total pages to process: 2
+2025-05-24 22:25:13 - DEBUG - uvicorn - Processing page 1/2 with batch size 1
+2025-05-24 22:25:13 - DEBUG - uvicorn - Starting to fetch 1 random users, page 1
+2025-05-24 22:25:13 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 1}
+2025-05-24 22:25:13 - INFO - uvicorn - Successfully fetched 1 users from API, page 1
+2025-05-24 22:25:13 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:25:13 - INFO - uvicorn - Successfully fetched page 1: 1 users
+2025-05-24 22:25:13 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 22:25:13 - DEBUG - uvicorn - Processing page 2/2 with batch size 1
+2025-05-24 22:25:13 - DEBUG - uvicorn - Starting to fetch 1 random users, page 2
+2025-05-24 22:25:13 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 2}
+2025-05-24 22:25:13 - INFO - uvicorn - Successfully fetched 1 users from API, page 2
+2025-05-24 22:25:13 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:25:13 - INFO - uvicorn - Successfully fetched page 2: 1 users
+2025-05-24 22:25:13 - DEBUG - uvicorn - Successfully committed page 2
+2025-05-24 22:25:13 - INFO - uvicorn - User loading completed. Total added: 2
+2025-05-24 22:25:13 - DEBUG - uvicorn - Database session closed
+2025-05-24 22:25:13 - DEBUG - uvicorn - Trying to get user from ID: 1
+2025-05-24 22:25:13 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users 
+WHERE users.id = :id_1
+2025-05-24 22:25:13 - DEBUG - uvicorn - User successfully received: 1
+2025-05-24 22:25:13 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:25:13 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:25:13 - INFO - uvicorn - Successfully fetched random user ID: 1
+2025-05-24 22:25:13 - DEBUG - uvicorn - User details - Email: None | Name: Artem As
+2025-05-24 22:25:13 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=0
+2025-05-24 22:25:13 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:25:13 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:25:13 - INFO - uvicorn - Successfully fetched 2/2 users
+2025-05-24 22:25:13 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 22:25:13 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=100
+2025-05-24 22:25:13 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:25:13 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:25:13 - INFO - uvicorn - Successfully fetched 0/0 users
+2025-05-24 22:25:13 - DEBUG - uvicorn - First user ID: <MagicMock name='mock.execute().scalars().all().__getitem__().id' id='127005724691536'>
+2025-05-24 22:25:13 - DEBUG - uvicorn - Starting to fetch 10 random users, page 1
+2025-05-24 22:25:14 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 10, 'page': 1}
+2025-05-24 22:25:14 - INFO - uvicorn - Successfully fetched 10 users from API, page 1
+2025-05-24 22:25:14 - DEBUG - uvicorn - Response status: 200
