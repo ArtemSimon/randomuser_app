@@ -3,6 +3,7 @@ from app.api.models import User
 from app.api.service import fetch_random_users,process_users_batch
 # from app.api.service import fetch_random_users,parse_user,process_users_batch,fetch_users
 from uuid import UUID
+from typing import Tuple, List
 from pydantic import BaseModel
 from sqlalchemy import func, select
 from sqlalchemy.exc import SQLAlchemyError
@@ -41,11 +42,6 @@ class UserApi():
                     parsed_users = await process_users_batch(small_batch)
                     
                     for user_data in parsed_users:
-                        # # Проверяем, существует ли пользователь с таким email
-                        # existing_user = await self.session.execute(
-                        #     select(User).where(User.email == user_data.email)
-                        # )
-                        # if existing_user.scalar_one_or_none() is None:
                         self.session.add(user_data)
                         await self.session.flush()  # Частичное сохранение
                         user_data.profile_url = f'http://homepage/internal_user/{user_data.id}'
@@ -59,7 +55,6 @@ class UserApi():
         
         except Exception as e:
             await self.session.rollback()
-            print(f"Ошибка при загрузке пользователей: {str(e)}")
             raise HTTPException(
                 status_code=500,
                 detail=f"User loading failed: {str(e)}"
@@ -94,14 +89,14 @@ class UserApi():
             return user
             
         except SQLAlchemyError as e:
-            logger.error(f"Random user fetch failed: {str(e)}")
+            # logger.error(f"Random user fetch failed: {str(e)}")
             raise HTTPException(
                 status_code=500,
                 detail="Не удалось получить случайного пользователя."
             )
         
-
-    async def get_users_from_db(self,limit:int, offset:int = 0):
+    """Получаем пользователей из базы данных """
+    async def get_users_from_db(self,limit:int, offset:int = 0) -> Tuple[List[User],int]:
         try:
             query= select(User)
             users_in_db = await self.session.execute(
@@ -120,7 +115,7 @@ class UserApi():
             return users_final, total_all
         
         except SQLAlchemyError as e:
-            logger.error(f"Database error: {str(e)}")
+            # logger.error(f"Database error: {str(e)}")
             raise HTTPException(
             status_code=500,
             detail="Database error"

@@ -2,7 +2,7 @@
 import logging
 
 from sqlalchemy import delete, select, text
-from app.api.schemas import SUserResponse, SUserFind
+from app.api.schemas import SUserResponse, SUserFind,SUserListResponce
 from app.api.crud import UserApi
 from app.api.models import User
 from app.database import get_async_session
@@ -21,12 +21,12 @@ templates = Jinja2Templates(directory="app/templates")
 async def health_check():
     return {"status": "ok"}
 
-@router.get('/users_in_db')
+@router.get('/users_in_db',response_model=SUserListResponce)
 async def get_users(
     page: int,
     limit: int,
     session: AsyncSession = Depends(get_async_session)
-):
+): 
     user = UserApi(session)
     users_get,count = await user.get_users_from_db(limit,offset=(page-1)*limit)
     return {
@@ -47,7 +47,7 @@ async def load_user_random(
 ):
     users_api = UserApi(session)
     users_count = await users_api.async_load_user(count)
-    if not users_api:
+    if users_api is None:
         return {'message':f'Пользователи не загрузились'}
     return users_count
 
@@ -79,9 +79,8 @@ async def get_user(
     user = UserApi(session)
     data_user = await user.get_user_by_id(user_id)
     return templates.TemplateResponse(
-        "user_profile.html",
+        request,"user_profile.html",
         {
-            "request": request,
             "user": data_user,
             "title": f"Профиль {data_user.first_name} {data_user.last_name}"
         }
@@ -95,9 +94,8 @@ async def get_random_user(
     user_random = UserApi(session)
     data_user_random = await user_random.get_random_user()
     return templates.TemplateResponse(
-        "user_profile.html",
+        request, "user_profile.html",
         {
-            "request": request,
             "user": data_user_random,
             "title": f"Профиль {data_user_random.first_name} {data_user_random.last_name}"
         }
