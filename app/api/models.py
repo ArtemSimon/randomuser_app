@@ -1,7 +1,7 @@
 from enum import Enum as PyEnum
 from sqlalchemy import DateTime,ForeignKey,Text,Column,Integer,String,Enum
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 class Gender(str, PyEnum):
