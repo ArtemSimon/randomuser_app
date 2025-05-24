@@ -36,7 +36,7 @@ async def get_users(
         users_get,count = await user.get_users_from_db(limit,offset=(page-1)*limit)
 
         logger.info(f"Successfully returned {len(users_get)} users (page {page})")
-        logger.debug(f"First user ID: {users_get[0]['id'] if users_get else 'None'}")
+       
         
         return {
             "data": users_get,

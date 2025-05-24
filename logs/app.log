@@ -472,3 +472,870 @@ FROM users
 2025-05-24 22:25:14 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 10, 'page': 1}
 2025-05-24 22:25:14 - INFO - uvicorn - Successfully fetched 10 users from API, page 1
 2025-05-24 22:25:14 - DEBUG - uvicorn - Response status: 200
+2025-05-24 19:39:44 - INFO - uvicorn - Database engine created successfully
+2025-05-24 19:39:44 - INFO - uvicorn.error - Started server process [7]
+2025-05-24 19:39:44 - INFO - uvicorn.error - Waiting for application startup.
+2025-05-24 19:39:44 - INFO - uvicorn.error - ASGI 'lifespan' protocol appears unsupported.
+2025-05-24 19:39:44 - INFO - uvicorn.error - Application startup complete.
+2025-05-24 19:39:44 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-05-24 19:39:48 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:39:53 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:39:59 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:40:04 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:40:09 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:40:15 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:40:20 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:40:25 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:40:31 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:40:36 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:40:42 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:40:47 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:40:52 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:40:58 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:41:03 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:41:09 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:41:14 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:41:19 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:41:25 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:41:30 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:41:36 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:41:41 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:41:46 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:41:52 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:41:57 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:42:03 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:42:08 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:42:13 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:42:19 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:42:24 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:42:29 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:42:35 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:42:40 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:42:46 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:42:51 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:42:56 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:43:02 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:43:07 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:43:12 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:43:18 - ERROR - uvicorn.error - Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+TypeError: LogFilterMiddleware.__call__() takes 3 positional arguments but 4 were given
+2025-05-24 19:43:31 - INFO - uvicorn - Database engine created successfully
+2025-05-24 19:43:31 - INFO - uvicorn.error - Started server process [8]
+2025-05-24 19:43:31 - INFO - uvicorn.error - Waiting for application startup.
+2025-05-24 19:43:31 - INFO - uvicorn - Starting app
+2025-05-24 19:43:31 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-05-24 19:43:31 - DEBUG - uvicorn - Total pages to process: 1
+2025-05-24 19:43:31 - DEBUG - uvicorn - Processing page 1/1 with batch size 1000
+2025-05-24 19:43:31 - DEBUG - uvicorn - Starting to fetch 1000 random users, page 1
+2025-05-24 19:43:31 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1000, 'page': 1}
+2025-05-24 19:43:32 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-05-24 19:43:32 - DEBUG - uvicorn - Response status: 200
+2025-05-24 19:43:32 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-05-24 19:43:34 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 19:43:34 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-05-24 19:43:34 - DEBUG - uvicorn - Database session closed
+2025-05-24 19:43:34 - INFO - uvicorn - Loading 1000 users completed
+2025-05-24 19:43:34 - INFO - uvicorn.error - Application startup complete.
+2025-05-24 19:43:34 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-05-24 19:43:40 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 19:43:40 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:43:40 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:43:40 - INFO - uvicorn - Successfully fetched 100/15556 users
+2025-05-24 19:43:40 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 19:43:41 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 19:43:41 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:43:41 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:43:41 - INFO - uvicorn - Successfully fetched 100/15556 users
+2025-05-24 19:43:41 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 19:43:42 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 19:43:42 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:43:42 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:43:42 - INFO - uvicorn - Successfully fetched 100/15556 users
+2025-05-24 19:43:42 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 19:43:42 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 19:43:42 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:43:42 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:43:42 - INFO - uvicorn - Successfully fetched 100/15556 users
+2025-05-24 19:43:42 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 22:45:06 - INFO - uvicorn - Database engine created successfully
+2025-05-24 22:45:06 - INFO - uvicorn - Starting user loading process. Total: 2, batch size: 1
+2025-05-24 22:45:06 - DEBUG - uvicorn - Total pages to process: 2
+2025-05-24 22:45:06 - DEBUG - uvicorn - Processing page 1/2 with batch size 1
+2025-05-24 22:45:06 - DEBUG - uvicorn - Starting to fetch 1 random users, page 1
+2025-05-24 22:45:06 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 1}
+2025-05-24 22:45:06 - INFO - uvicorn - Successfully fetched 1 users from API, page 1
+2025-05-24 22:45:06 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:45:06 - INFO - uvicorn - Successfully fetched page 1: 1 users
+2025-05-24 22:45:06 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 22:45:06 - DEBUG - uvicorn - Processing page 2/2 with batch size 1
+2025-05-24 22:45:06 - DEBUG - uvicorn - Starting to fetch 1 random users, page 2
+2025-05-24 22:45:07 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 2}
+2025-05-24 22:45:07 - INFO - uvicorn - Successfully fetched 1 users from API, page 2
+2025-05-24 22:45:07 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:45:07 - INFO - uvicorn - Successfully fetched page 2: 1 users
+2025-05-24 22:45:07 - DEBUG - uvicorn - Successfully committed page 2
+2025-05-24 22:45:07 - INFO - uvicorn - User loading completed. Total added: 2
+2025-05-24 22:45:07 - DEBUG - uvicorn - Database session closed
+2025-05-24 22:45:07 - DEBUG - uvicorn - Trying to get user from ID: 1
+2025-05-24 22:45:07 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users 
+WHERE users.id = :id_1
+2025-05-24 22:45:07 - DEBUG - uvicorn - User successfully received: 1
+2025-05-24 22:45:07 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:45:07 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:45:07 - INFO - uvicorn - Successfully fetched random user ID: 1
+2025-05-24 22:45:07 - DEBUG - uvicorn - User details - Email: None | Name: Artem As
+2025-05-24 22:45:07 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=0
+2025-05-24 22:45:07 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:45:07 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:45:07 - INFO - uvicorn - Successfully fetched 2/2 users
+2025-05-24 22:45:07 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 22:45:07 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=100
+2025-05-24 22:45:07 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:45:07 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:45:07 - INFO - uvicorn - Successfully fetched 0/0 users
+2025-05-24 22:45:07 - DEBUG - uvicorn - First user ID: <MagicMock name='mock.execute().scalars().all().__getitem__().id' id='138493361293504'>
+2025-05-24 22:45:07 - DEBUG - uvicorn - Starting to fetch 10 random users, page 1
+2025-05-24 22:45:07 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 10, 'page': 1}
+2025-05-24 22:45:07 - INFO - uvicorn - Successfully fetched 10 users from API, page 1
+2025-05-24 22:45:07 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:45:26 - INFO - uvicorn - Database engine created successfully
+2025-05-24 22:45:26 - INFO - uvicorn - Starting user loading process. Total: 2, batch size: 1
+2025-05-24 22:45:26 - DEBUG - uvicorn - Total pages to process: 2
+2025-05-24 22:45:26 - DEBUG - uvicorn - Processing page 1/2 with batch size 1
+2025-05-24 22:45:26 - DEBUG - uvicorn - Starting to fetch 1 random users, page 1
+2025-05-24 22:45:26 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 1}
+2025-05-24 22:45:27 - INFO - uvicorn - Successfully fetched 1 users from API, page 1
+2025-05-24 22:45:27 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:45:27 - INFO - uvicorn - Successfully fetched page 1: 1 users
+2025-05-24 22:45:27 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 22:45:27 - DEBUG - uvicorn - Processing page 2/2 with batch size 1
+2025-05-24 22:45:27 - DEBUG - uvicorn - Starting to fetch 1 random users, page 2
+2025-05-24 22:45:27 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1, 'page': 2}
+2025-05-24 22:45:27 - INFO - uvicorn - Successfully fetched 1 users from API, page 2
+2025-05-24 22:45:27 - DEBUG - uvicorn - Response status: 200
+2025-05-24 22:45:27 - INFO - uvicorn - Successfully fetched page 2: 1 users
+2025-05-24 22:45:27 - DEBUG - uvicorn - Successfully committed page 2
+2025-05-24 22:45:27 - INFO - uvicorn - User loading completed. Total added: 2
+2025-05-24 22:45:27 - DEBUG - uvicorn - Database session closed
+2025-05-24 22:45:27 - DEBUG - uvicorn - Trying to get user from ID: 1
+2025-05-24 22:45:27 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users 
+WHERE users.id = :id_1
+2025-05-24 22:45:27 - DEBUG - uvicorn - User successfully received: 1
+2025-05-24 22:45:27 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 22:45:27 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 22:45:27 - INFO - uvicorn - Successfully fetched random user ID: 1
+2025-05-24 22:45:27 - DEBUG - uvicorn - User details - Email: None | Name: Artem As
+2025-05-24 22:45:27 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=0
+2025-05-24 22:45:27 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:45:27 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:45:27 - INFO - uvicorn - Successfully fetched 2/2 users
+2025-05-24 22:45:27 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 22:45:27 - DEBUG - uvicorn - Fetching users from DB with limit=2, offset=100
+2025-05-24 22:45:27 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 22:45:27 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 22:45:27 - INFO - uvicorn - Successfully fetched 0/0 users
+2025-05-24 22:45:27 - DEBUG - uvicorn - First user ID: <MagicMock name='mock.execute().scalars().all().__getitem__().id' id='127394258553168'>
+2025-05-24 22:45:27 - DEBUG - uvicorn - Starting to fetch 10 random users, page 1
+2025-05-24 22:45:27 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 10, 'page': 1}
+2025-05-24 22:45:27 - INFO - uvicorn - Successfully fetched 10 users from API, page 1
+2025-05-24 22:45:27 - DEBUG - uvicorn - Response status: 200
+2025-05-24 19:45:51 - INFO - uvicorn - Database engine created successfully
+2025-05-24 19:45:51 - INFO - uvicorn.error - Started server process [7]
+2025-05-24 19:45:51 - INFO - uvicorn.error - Waiting for application startup.
+2025-05-24 19:45:51 - INFO - uvicorn - Starting app
+2025-05-24 19:45:51 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-05-24 19:45:51 - DEBUG - uvicorn - Total pages to process: 1
+2025-05-24 19:45:51 - DEBUG - uvicorn - Processing page 1/1 with batch size 1000
+2025-05-24 19:45:51 - DEBUG - uvicorn - Starting to fetch 1000 random users, page 1
+2025-05-24 19:45:51 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 1000, 'page': 1}
+2025-05-24 19:45:52 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-05-24 19:45:52 - DEBUG - uvicorn - Response status: 200
+2025-05-24 19:45:52 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-05-24 19:45:53 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 19:45:53 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-05-24 19:45:53 - DEBUG - uvicorn - Database session closed
+2025-05-24 19:45:53 - INFO - uvicorn - Loading 1000 users completed
+2025-05-24 19:45:53 - INFO - uvicorn.error - Application startup complete.
+2025-05-24 19:45:53 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-05-24 19:45:56 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 19:45:56 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:45:56 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:45:56 - INFO - uvicorn - Successfully fetched 100/16556 users
+2025-05-24 19:45:56 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 19:46:00 - DEBUG - uvicorn - Trying to get user from ID: 1
+2025-05-24 19:46:00 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users 
+WHERE users.id = :id_1
+2025-05-24 19:46:00 - DEBUG - uvicorn - User successfully received: 1
+2025-05-24 19:46:01 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 19:46:01 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:46:01 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:46:01 - INFO - uvicorn - Successfully fetched 100/16556 users
+2025-05-24 19:46:01 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 19:46:02 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 19:46:02 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 19:46:02 - INFO - uvicorn - Successfully fetched random user ID: 2562
+2025-05-24 19:46:02 - DEBUG - uvicorn - User details - Email: layla.taylor@example.com | Name: Layla Taylor
+2025-05-24 19:46:03 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 19:46:03 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:46:03 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:46:03 - INFO - uvicorn - Successfully fetched 100/16556 users
+2025-05-24 19:46:03 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 19:46:04 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 19:46:04 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 19:46:04 - INFO - uvicorn - Successfully fetched random user ID: 15819
+2025-05-24 19:46:04 - DEBUG - uvicorn - User details - Email: boronislav.boychishin@example.com | Name: Boronislav Boychishin
+2025-05-24 19:46:05 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=0
+2025-05-24 19:46:05 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:46:05 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:46:05 - INFO - uvicorn - Successfully fetched 100/16556 users
+2025-05-24 19:46:05 - DEBUG - uvicorn - First user ID: 1
+2025-05-24 19:46:08 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=100
+2025-05-24 19:46:08 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:46:08 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:46:08 - INFO - uvicorn - Successfully fetched 100/16556 users
+2025-05-24 19:46:08 - DEBUG - uvicorn - First user ID: 101
+2025-05-24 19:46:09 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=200
+2025-05-24 19:46:09 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:46:09 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:46:09 - INFO - uvicorn - Successfully fetched 100/16556 users
+2025-05-24 19:46:09 - DEBUG - uvicorn - First user ID: 201
+2025-05-24 19:46:09 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=300
+2025-05-24 19:46:09 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:46:09 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:46:09 - INFO - uvicorn - Successfully fetched 100/16556 users
+2025-05-24 19:46:09 - DEBUG - uvicorn - First user ID: 301
+2025-05-24 19:46:09 - DEBUG - uvicorn - Fetching users from DB with limit=100, offset=400
+2025-05-24 19:46:09 - DEBUG - uvicorn - Executing users query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users
+2025-05-24 19:46:09 - DEBUG - uvicorn - Executing count query: SELECT count(*) AS count_1 
+FROM users
+2025-05-24 19:46:09 - INFO - uvicorn - Successfully fetched 100/16556 users
+2025-05-24 19:46:09 - DEBUG - uvicorn - First user ID: 401
+2025-05-24 19:46:14 - DEBUG - uvicorn - Trying to get user from ID: 1
+2025-05-24 19:46:14 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users 
+WHERE users.id = :id_1
+2025-05-24 19:46:15 - DEBUG - uvicorn - User successfully received: 1
+2025-05-24 19:46:20 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 19:46:20 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 19:46:20 - INFO - uvicorn - Successfully fetched random user ID: 3282
+2025-05-24 19:46:20 - DEBUG - uvicorn - User details - Email: kornelius.klungland@example.com | Name: Kornelius Klungland
+2025-05-24 19:46:51 - INFO - uvicorn - Starting user loading process. Total: 444, batch size: 5000
+2025-05-24 19:46:51 - DEBUG - uvicorn - Total pages to process: 1
+2025-05-24 19:46:51 - DEBUG - uvicorn - Processing page 1/1 with batch size 444
+2025-05-24 19:46:51 - DEBUG - uvicorn - Starting to fetch 444 random users, page 1
+2025-05-24 19:46:51 - DEBUG - uvicorn - Making request to randomuser.me with params: {'results': 444, 'page': 1}
+2025-05-24 19:46:52 - INFO - uvicorn - Successfully fetched 444 users from API, page 1
+2025-05-24 19:46:52 - DEBUG - uvicorn - Response status: 200
+2025-05-24 19:46:52 - INFO - uvicorn - Successfully fetched page 1: 444 users
+2025-05-24 19:46:52 - DEBUG - uvicorn - Successfully committed page 1
+2025-05-24 19:46:52 - INFO - uvicorn - User loading completed. Total added: 444
+2025-05-24 19:46:52 - DEBUG - uvicorn - Database session closed
+2025-05-24 19:49:06 - DEBUG - uvicorn - Attempting to fetch random user from database
+2025-05-24 19:49:06 - DEBUG - uvicorn - Executing query: SELECT users.id, users.external_id, users.gender, users.first_name, users.last_name, users.email, users.phone, users.street, users.city, users.state, users.country, users.postcode, users.picture_thumbnail, users.profile_url 
+FROM users ORDER BY random()
+ LIMIT :param_1
+2025-05-24 19:49:06 - INFO - uvicorn - Successfully fetched random user ID: 2504
+2025-05-24 19:49:06 - DEBUG - uvicorn - User details - Email: patrick.hall@example.com | Name: Patrick Hall

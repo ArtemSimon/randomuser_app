@@ -31,7 +31,6 @@ app= FastAPI(lifespan=lifespan)
 app.include_router(router_randomuser)
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
-
 templates = Jinja2Templates(directory="app/templates")
 
 @app.get("/", response_class=HTMLResponse)
