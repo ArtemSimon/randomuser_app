@@ -30,21 +30,23 @@ sudo nano /etc/hosts
 
 Я оставил в репозитории все .env файлы.
 
-postgres.env - для PostgreSQL:
+postgres.env - для PostgreSQL:`
 
+```
 POSTGRES_USER=ваш_пользователь
 POSTGRES_PASSWORD=ваш_пароль
 POSTGRES_DB=ваша_база_данных
-
+```
 
 randomuser.env - для приложения FastAPI (укажите те же данные, что и для PostgreSQL):
 
+```
 DB_USER=ваш_пользователь
 DB_PASS=ваш_пароль
 DB_NAME=ваша_база_данных
 DB_HOST=pg_randomuser
 DB_PORT=5432
-
+```
 # Запуск приложения
 
 Клонируйте репозиторий
@@ -65,7 +67,6 @@ cd randomuser_app
 docker-compose up -d
 ```
 
-Приложение будет доступно по адресу: http://localhost
 
 # Остановка приложения
 
