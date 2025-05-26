@@ -1,21 +1,21 @@
 
-import logging
+
 
 from sqlalchemy import delete, select, text
 from app.api.schemas import SUserResponse, SUserFind,SUserListResponce
 from app.api.crud import UserApi
 from app.api.models import User
 from app.database import get_async_session
-from fastapi import APIRouter,Depends, HTTPException, Query, logger,status,Request
+from app.config import logger
+from fastapi import APIRouter,Depends, HTTPException, Query,status,Request
 from fastapi.templating import Jinja2Templates
 from uuid import UUID
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.exc import SQLAlchemyError
 
-
 router = APIRouter()
 
-logger = logging.getLogger(__name__)
+
 templates = Jinja2Templates(directory="app/templates")
 
 @router.get("/health")  # для проверки работоспособности сервера 
