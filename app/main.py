@@ -13,7 +13,7 @@ from app.config import logger
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Код,который выполняется при запуске приложения
+    # Код,который  выполняется при запуске приложения
     logger.info('Starting app')
     await create_tables()
     async with async_session_maker() as session:
