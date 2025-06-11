@@ -5,7 +5,7 @@ stages:
 build_MR:
 stage: build
 tags:
-  - build_mr
+  - docker
 image: 
   name: gcr.io/kaniko-project/executor:v1.24.0-debug
   entrypoint: [ "" ]
@@ -21,14 +21,14 @@ rules:
 build_main:
 stage: build
 tags:
-  - build_main
+  - docker
 image:
   name:  gcr.io/kaniko-project/executor:v1.24.0-debug
   entrypoint: [ "" ]
 script: 
   - /kaniko/executor 
-  --context "${CI_PROJECT_DIR}"
-  --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
-  --destination "${CI_REGISTRY_IMAGE}:latest"
+    --context "${CI_PROJECT_DIR}"
+    --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+    --destination "${CI_REGISTRY_IMAGE}:latest"
 rules: 
   - if: $CI_COMMIT_BRANCH == "main" 
