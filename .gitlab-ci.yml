@@ -10,6 +10,7 @@ build_MR:
     name: gcr.io/kaniko-project/executor:v1.24.0-debug
     entrypoint: [ "" ]
   script:
+    - ls -la ${CI_PROJECT_DIR}/requirements.txt
     - /kaniko/executor
       --context "${CI_PROJECT_DIR}"
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile"

@@ -3,9 +3,6 @@ FROM python:3.10-slim as builder
 
 WORKDIR /app
 
-# Копируем только файлы зависимостей
-COPY requirements.txt .
-
 
 RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
