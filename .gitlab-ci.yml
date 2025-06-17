@@ -11,10 +11,10 @@ build_MR:
     entrypoint: [ "" ]
   script:
     - ls -la ${CI_PROJECT_DIR}/requirements.txt
-    - /kaniko/executor
-      --context "${CI_PROJECT_DIR}"
-      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
-      --no-push
+    # - /kaniko/executor
+    #   --context "${CI_PROJECT_DIR}"
+    #   --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+    #   --no-push
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
 
