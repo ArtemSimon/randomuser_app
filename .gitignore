@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 postgres.env
 randomuser.env
+redis_data
