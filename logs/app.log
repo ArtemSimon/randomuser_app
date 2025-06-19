@@ -1339,3 +1339,101 @@ FROM users ORDER BY random()
  LIMIT :param_1
 2025-05-24 19:49:06 - INFO - uvicorn - Successfully fetched random user ID: 2504
 2025-05-24 19:49:06 - DEBUG - uvicorn - User details - Email: patrick.hall@example.com | Name: Patrick Hall
+2025-06-19 18:38:40 - INFO - uvicorn - Database engine created successfully
+2025-06-19 18:38:40 - INFO - uvicorn.error - Started server process [7]
+2025-06-19 18:38:40 - INFO - uvicorn.error - Waiting for application startup.
+2025-06-19 18:38:40 - INFO - uvicorn - Starting app
+2025-06-19 18:38:40 - ERROR - uvicorn - Error for connect Redis
+2025-06-19 18:38:40 - ERROR - uvicorn.error - Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/redis/asyncio/connection.py", line 302, in connect_check_health
+    await self.retry.call_with_retry(
+  File "/opt/venv/lib/python3.10/site-packages/redis/asyncio/retry.py", line 71, in call_with_retry
+    return await do()
+  File "/opt/venv/lib/python3.10/site-packages/redis/asyncio/connection.py", line 759, in _connect
+    reader, writer = await asyncio.open_connection(
+  File "/usr/local/lib/python3.10/asyncio/streams.py", line 48, in open_connection
+    transport, _ = await loop.create_connection(
+  File "/usr/local/lib/python3.10/asyncio/base_events.py", line 1036, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.10/asyncio/base_events.py", line 1418, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.10/socket.py", line 967, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/core/redis.py", line 14, in get_redis
+    await redis_client.ping()
+  File "/opt/venv/lib/python3.10/site-packages/redis/asyncio/client.py", line 673, in execute_command
+    conn = self.connection or await pool.get_connection()
+  File "/opt/venv/lib/python3.10/site-packages/redis/asyncio/connection.py", line 1145, in get_connection
+    await self.ensure_connection(connection)
+  File "/opt/venv/lib/python3.10/site-packages/redis/asyncio/connection.py", line 1178, in ensure_connection
+    await connection.connect()
+  File "/opt/venv/lib/python3.10/site-packages/redis/asyncio/connection.py", line 296, in connect
+    await self.connect_check_health(check_health=True)
+  File "/opt/venv/lib/python3.10/site-packages/redis/asyncio/connection.py", line 310, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.10/site-packages/starlette/routing.py", line 692, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/usr/local/lib/python3.10/contextlib.py", line 199, in __aenter__
+    return await anext(self.gen)
+  File "/opt/venv/lib/python3.10/site-packages/fastapi/routing.py", line 133, in merged_lifespan
+    async with original_context(app) as maybe_original_state:
+  File "/usr/local/lib/python3.10/contextlib.py", line 199, in __aenter__
+    return await anext(self.gen)
+  File "/app/app/main.py", line 20, in lifespan
+    redis = await get_redis()
+  File "/app/app/core/redis.py", line 19, in get_redis
+    raise RuntimeError(f'Error for connect at Redis:{e}')
+RuntimeError: Error for connect at Redis:Error -3 connecting to redis:6379. Temporary failure in name resolution.
+
+2025-06-19 18:38:40 - ERROR - uvicorn.error - Application startup failed. Exiting.
+2025-06-19 18:41:54 - INFO - uvicorn - Database engine created successfully
+2025-06-19 18:41:54 - INFO - uvicorn.error - Started server process [7]
+2025-06-19 18:41:54 - INFO - uvicorn.error - Waiting for application startup.
+2025-06-19 18:41:54 - INFO - uvicorn - Starting app
+2025-06-19 18:41:54 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-06-19 18:41:56 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-06-19 18:41:56 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-06-19 18:41:58 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-06-19 18:41:58 - INFO - uvicorn - Loading 1000 users completed
+2025-06-19 18:41:58 - INFO - uvicorn.error - Application startup complete.
+2025-06-19 18:41:58 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-06-19 18:48:43 - INFO - uvicorn - Database engine created successfully
+2025-06-19 18:48:43 - INFO - uvicorn.error - Started server process [7]
+2025-06-19 18:48:43 - INFO - uvicorn.error - Waiting for application startup.
+2025-06-19 18:48:43 - INFO - uvicorn - Starting app
+2025-06-19 18:48:43 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-06-19 18:48:45 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-06-19 18:48:45 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-06-19 18:48:46 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-06-19 18:48:46 - INFO - uvicorn - Loading 1000 users completed
+2025-06-19 18:48:46 - INFO - uvicorn.error - Application startup complete.
+2025-06-19 18:48:46 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-06-19 18:49:03 - INFO - uvicorn - Successfully fetched 100/19000 users
+2025-06-19 18:49:03 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-06-19 18:49:10 - INFO - uvicorn - Successfully fetched 100/19000 users
+2025-06-19 18:49:10 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-06-19 18:49:18 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-06-19 18:49:18 - INFO - uvicorn - Successfully retrieved user ID: 1
+2025-06-19 18:49:37 - INFO - uvicorn - Successfully fetched 100/19000 users
+2025-06-19 18:49:37 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-06-19 18:49:39 - INFO - uvicorn - Successfully fetched 100/19000 users
+2025-06-19 18:49:39 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-06-19 18:49:44 - INFO - uvicorn - Random user profile request from 172.31.0.5
+2025-06-19 18:49:44 - INFO - uvicorn - Successfully fetched random user ID: 17613
+2025-06-19 18:49:44 - INFO - uvicorn - Successfully retrieved random user
+2025-06-19 18:49:47 - INFO - uvicorn - Successfully fetched 100/19000 users
+2025-06-19 18:49:47 - INFO - uvicorn - Successfully returned 100 users (page 1)

@@ -3,8 +3,8 @@ services:
 
   # сервис приложения
   fast_api_app: 
-    # build: .
-    image: fast_api_app:1
+    build: .
+    # image: fast_api_app:1
     container_name: fast_api_app
     env_file: "randomuser.env"
     depends_on:
@@ -67,9 +67,9 @@ services:
       randomuser_network:
         aliases: [nginx]
 
-  redis:
-    container_name: redis
-    image: redis:alpine
+  redis_randomuser:
+    container_name: redis_randomuser
+    image: redis
     ports:
       - "6379:6379"
     volumes:
@@ -79,6 +79,9 @@ services:
       interval: 5s
       timeout: 3s
       retries: 3
+    networks:
+        randomuser_network:
+          aliases: [redis_randomuser]
 
 volumes:
   redis_data:
