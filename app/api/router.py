@@ -1,6 +1,4 @@
-
-
-
+import json
 from sqlalchemy import delete, select, text
 from app.api.schemas import SUserResponse, SUserFind,SUserListResponce
 from app.api.crud import UserApi
@@ -12,6 +10,9 @@ from fastapi.templating import Jinja2Templates
 from uuid import UUID
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.exc import SQLAlchemyError
+from app.core.redis import get_redis
+from redis.asyncio import Redis
+from fastapi.encoders import jsonable_encoder
 
 router = APIRouter()
 
@@ -61,6 +62,7 @@ async def get_users(
 async def load_user_random(
     count: int,
     request: Request,
+    redis: Redis = Depends(get_redis),
     session: AsyncSession = Depends(get_async_session),
 ):
     
@@ -68,13 +70,16 @@ async def load_user_random(
         logger.info(f"User load request from {request.client.host} for {count} users")
         logger.debug(f"Request parameters - count: {count}")
         
-        users_api = UserApi(session)
-        users_count = await users_api.async_load_user(count)
 
-        logger.info(f"Successfully loaded {users_count} users")
+        # Делаем запрос к БД 
+        users_api = UserApi(session)
+        user_count = await users_api.async_load_user(count)
+
+
+        logger.info(f"Successfully loaded {user_count} users")
         logger.debug(f"Load operation completed for {count} requested users")
         
-        return users_count
+        return user_count
     
     except HTTPException as http_exc:
         # Уже обработанные HTTP ошибки
@@ -114,14 +119,44 @@ async def reset_users (
 async def get_user(
     user_id: int,
     request: Request,
+    redis: Redis = Depends(get_redis),
     session: AsyncSession = Depends(get_async_session)
 ):
     try:
         logger.info(f"User profile request for ID: {user_id} from {request.client.host}")
         logger.debug(f"Request details: {request.method} {request.url}")
+        
+        # создаем ключ на основе url и добавляем уникальность с помощью user_id 
+        hash_key = f'{request.url.path}:{user_id}'
+        
+        # Пытаемся получить значение из кеша 
+        try:
+            responce = await redis.get(hash_key)
+            if responce:
+                logger.info('Returning data from cache')
+                cache_data_user =  json.loads(responce)
+                return templates.TemplateResponse(
+                    request,"user_profile.html",
+                {
+                    "user": cache_data_user,
+                    "title": f"Профиль {cache_data_user['first_name']} {cache_data_user['last_name']}",
+                    "from_cache": True  # Дополнительный флаг для шаблона
+                }
+            )
+        except Exception as e: 
+            logger.error(f'Redis down with error {e}')
 
+        # Делаем запрос к БД 
         user = UserApi(session)
         data_user = await user.get_user_by_id(user_id)
+        data_user_json = jsonable_encoder(data_user) # преобразовываем данные в формат Json
+
+        # Кешируем полученные данные 
+        try:
+            await redis.setex(hash_key,3600,json.dumps(data_user_json))
+        except Exception as e:
+            logger.error(f'Cache update failed {e}')
+
 
         logger.info(f"Successfully retrieved user ID: {user_id}")
         logger.debug(f"User data: {data_user.first_name} {data_user.last_name}")
