@@ -1,0 +1,14 @@
+def get_products(ids)
+    sql_query='SELECT * FROM Products where id in %s'%ids
+    # hash_key = hash.md5(sql_query)
+    hash_key="Products.%s"%ids
+    responce=redis.get(hash_key)
+    if not responce :
+        responce = sql(...)
+        redis.set(hash_key,responce,ttl=3600)
+
+    
+    
+    
+    
+    return responce

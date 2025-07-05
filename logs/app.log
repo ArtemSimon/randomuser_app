@@ -1437,3 +1437,228 @@ RuntimeError: Error for connect at Redis:Error -3 connecting to redis:6379. Temp
 2025-06-19 18:49:44 - INFO - uvicorn - Successfully retrieved random user
 2025-06-19 18:49:47 - INFO - uvicorn - Successfully fetched 100/19000 users
 2025-06-19 18:49:47 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:12:17 - INFO - uvicorn - Database engine created successfully
+2025-07-04 15:12:17 - INFO - uvicorn.error - Started server process [7]
+2025-07-04 15:12:17 - INFO - uvicorn.error - Waiting for application startup.
+2025-07-04 15:12:17 - INFO - uvicorn - Starting app
+2025-07-04 15:12:17 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-07-04 15:12:18 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-07-04 15:12:18 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-07-04 15:12:20 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-07-04 15:12:20 - INFO - uvicorn - Loading 1000 users completed
+2025-07-04 15:12:20 - INFO - uvicorn.error - Application startup complete.
+2025-07-04 15:12:20 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-07-04 15:13:48 - INFO - uvicorn - Successfully fetched 100/20000 users
+2025-07-04 15:13:48 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:14:00 - INFO - uvicorn - User load request from 172.31.0.1 for 12 users
+2025-07-04 15:14:00 - INFO - uvicorn - Starting user loading process. Total: 12, batch size: 5000
+2025-07-04 15:14:01 - INFO - uvicorn - Successfully fetched 12 users from API, page 1
+2025-07-04 15:14:01 - INFO - uvicorn - Successfully fetched page 1: 12 users
+2025-07-04 15:14:01 - INFO - uvicorn - User loading completed. Total added: 12
+2025-07-04 15:14:01 - INFO - uvicorn - Successfully loaded 12 users
+2025-07-04 15:14:33 - INFO - uvicorn - Random user profile request from 172.31.0.1
+2025-07-04 15:14:33 - INFO - uvicorn - Successfully fetched random user ID: 15237
+2025-07-04 15:14:33 - INFO - uvicorn - Successfully retrieved random user
+2025-07-04 15:14:46 - INFO - uvicorn - Successfully fetched 100/20012 users
+2025-07-04 15:14:46 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:14:47 - INFO - uvicorn - Random user profile request from 172.31.0.1
+2025-07-04 15:14:47 - INFO - uvicorn - Successfully fetched random user ID: 2461
+2025-07-04 15:14:47 - INFO - uvicorn - Successfully retrieved random user
+2025-07-04 15:14:50 - INFO - uvicorn - Successfully fetched 100/20012 users
+2025-07-04 15:14:50 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:14:50 - INFO - uvicorn - Random user profile request from 172.31.0.1
+2025-07-04 15:14:51 - INFO - uvicorn - Successfully fetched random user ID: 10936
+2025-07-04 15:14:51 - INFO - uvicorn - Successfully retrieved random user
+2025-07-04 15:14:52 - INFO - uvicorn - Successfully fetched 100/20012 users
+2025-07-04 15:14:52 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:15:02 - INFO - uvicorn - Successfully fetched 100/20012 users
+2025-07-04 15:15:02 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:17:09 - INFO - uvicorn - Successfully fetched 100/20012 users
+2025-07-04 15:17:09 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:18:41 - INFO - uvicorn - Successfully fetched 100/20012 users
+2025-07-04 15:18:41 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:19:02 - INFO - uvicorn - User profile request for ID: 3 from 172.31.0.1
+2025-07-04 15:19:02 - INFO - uvicorn - Successfully retrieved user ID: 3
+2025-07-04 15:19:35 - INFO - uvicorn - User profile request for ID: 2 from 172.31.0.1
+2025-07-04 15:19:35 - INFO - uvicorn - Successfully retrieved user ID: 2
+2025-07-04 15:22:49 - INFO - uvicorn - Successfully fetched 100/20012 users
+2025-07-04 15:22:49 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:24:15 - INFO - uvicorn - Successfully fetched 100/20012 users
+2025-07-04 15:24:15 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:24:17 - INFO - uvicorn - Successfully fetched 100/20012 users
+2025-07-04 15:24:17 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:24:26 - INFO - uvicorn - Random user profile request from 172.31.0.1
+2025-07-04 15:24:26 - INFO - uvicorn - Successfully fetched random user ID: 5235
+2025-07-04 15:24:26 - INFO - uvicorn - Successfully retrieved random user
+2025-07-04 15:24:27 - INFO - uvicorn - Successfully fetched 100/20012 users
+2025-07-04 15:24:27 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:24:41 - INFO - uvicorn - User load request from 172.31.0.1 for 2 users
+2025-07-04 15:24:41 - INFO - uvicorn - Starting user loading process. Total: 2, batch size: 5000
+2025-07-04 15:24:41 - INFO - uvicorn - Successfully fetched 2 users from API, page 1
+2025-07-04 15:24:41 - INFO - uvicorn - Successfully fetched page 1: 2 users
+2025-07-04 15:24:41 - INFO - uvicorn - User loading completed. Total added: 2
+2025-07-04 15:24:41 - INFO - uvicorn - Successfully loaded 2 users
+2025-07-04 15:29:14 - INFO - uvicorn - Database engine created successfully
+2025-07-04 15:29:14 - INFO - uvicorn.error - Started server process [7]
+2025-07-04 15:29:14 - INFO - uvicorn.error - Waiting for application startup.
+2025-07-04 15:29:14 - INFO - uvicorn - Starting app
+2025-07-04 15:29:14 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-07-04 15:29:15 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-07-04 15:29:15 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-07-04 15:29:17 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-07-04 15:29:17 - INFO - uvicorn - Loading 1000 users completed
+2025-07-04 15:29:17 - INFO - uvicorn.error - Application startup complete.
+2025-07-04 15:29:17 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-07-04 15:29:30 - INFO - uvicorn - User profile request for ID: 2 from 172.31.0.5
+2025-07-04 15:29:30 - INFO - uvicorn - Successfully retrieved user ID: 2
+2025-07-04 15:29:57 - INFO - uvicorn - Successfully fetched 100/21014 users
+2025-07-04 15:29:57 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:30:02 - INFO - uvicorn - Successfully fetched 100/21014 users
+2025-07-04 15:30:02 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:31:08 - INFO - uvicorn - Successfully fetched 100/21014 users
+2025-07-04 15:31:08 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:32:02 - INFO - uvicorn - Successfully fetched 100/21014 users
+2025-07-04 15:32:02 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 15:42:25 - INFO - uvicorn - User load request from 172.31.0.1 for 12 users
+2025-07-04 15:42:25 - INFO - uvicorn - Starting user loading process. Total: 12, batch size: 5000
+2025-07-04 15:42:25 - INFO - uvicorn - Successfully fetched 12 users from API, page 1
+2025-07-04 15:42:25 - INFO - uvicorn - Successfully fetched page 1: 12 users
+2025-07-04 15:42:25 - INFO - uvicorn - User loading completed. Total added: 12
+2025-07-04 15:42:25 - INFO - uvicorn - Successfully loaded 12 users
+2025-07-04 16:50:03 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-04 16:50:03 - INFO - uvicorn - Successfully retrieved user ID: 1
+2025-07-04 19:35:53 - INFO - uvicorn - Database engine created successfully
+2025-07-04 19:35:53 - INFO - uvicorn.error - Started server process [7]
+2025-07-04 19:35:53 - INFO - uvicorn.error - Waiting for application startup.
+2025-07-04 19:35:53 - INFO - uvicorn - Starting app
+2025-07-04 19:35:53 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-07-04 19:35:55 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-07-04 19:35:55 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-07-04 19:35:56 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-07-04 19:35:56 - INFO - uvicorn - Loading 1000 users completed
+2025-07-04 19:35:56 - INFO - uvicorn.error - Application startup complete.
+2025-07-04 19:35:56 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-07-04 19:36:14 - INFO - uvicorn - Successfully fetched 100/22026 users
+2025-07-04 19:36:14 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 19:37:11 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-04 19:37:11 - ERROR - uvicorn - Cache update failed Object of type User is not JSON serializable
+2025-07-04 19:37:11 - INFO - uvicorn - Successfully retrieved user ID: 1
+2025-07-04 19:37:46 - INFO - uvicorn - Successfully fetched 100/22026 users
+2025-07-04 19:37:46 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 19:37:47 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-04 19:37:47 - ERROR - uvicorn - Cache update failed Object of type User is not JSON serializable
+2025-07-04 19:37:47 - INFO - uvicorn - Successfully retrieved user ID: 1
+2025-07-04 19:39:13 - INFO - uvicorn - Successfully fetched 100/22026 users
+2025-07-04 19:39:13 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 19:39:14 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-04 19:39:14 - ERROR - uvicorn - Cache update failed Object of type User is not JSON serializable
+2025-07-04 19:39:14 - INFO - uvicorn - Successfully retrieved user ID: 1
+2025-07-04 19:39:52 - INFO - uvicorn - Successfully fetched 100/22026 users
+2025-07-04 19:39:52 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 20:01:07 - INFO - uvicorn - Database engine created successfully
+2025-07-04 20:01:07 - INFO - uvicorn.error - Started server process [7]
+2025-07-04 20:01:07 - INFO - uvicorn.error - Waiting for application startup.
+2025-07-04 20:01:07 - INFO - uvicorn - Starting app
+2025-07-04 20:01:07 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-07-04 20:01:08 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-07-04 20:01:08 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-07-04 20:01:09 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-07-04 20:01:09 - INFO - uvicorn - Loading 1000 users completed
+2025-07-04 20:01:09 - INFO - uvicorn.error - Application startup complete.
+2025-07-04 20:01:09 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-07-04 20:01:30 - INFO - uvicorn - Successfully fetched 100/23026 users
+2025-07-04 20:01:30 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 20:01:40 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-04 20:01:40 - INFO - uvicorn - Successfully retrieved user ID: 1
+2025-07-04 20:01:56 - INFO - uvicorn - Successfully fetched 100/23026 users
+2025-07-04 20:01:56 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 20:01:58 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-04 20:01:58 - INFO - uvicorn - Returning data from cache
+2025-07-04 20:02:19 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-04 20:02:19 - INFO - uvicorn - Returning data from cache
+2025-07-04 20:02:21 - INFO - uvicorn - User profile request for ID: 2 from 172.31.0.5
+2025-07-04 20:02:21 - INFO - uvicorn - Successfully retrieved user ID: 2
+2025-07-04 20:02:23 - INFO - uvicorn - Successfully fetched 100/23026 users
+2025-07-04 20:02:23 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 20:02:24 - INFO - uvicorn - User profile request for ID: 2 from 172.31.0.5
+2025-07-04 20:02:24 - INFO - uvicorn - Returning data from cache
+2025-07-04 20:03:29 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-04 20:03:29 - INFO - uvicorn - Returning data from cache
+2025-07-04 20:03:33 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-04 20:03:33 - INFO - uvicorn - Returning data from cache
+2025-07-04 20:12:10 - INFO - uvicorn - Database engine created successfully
+2025-07-04 20:12:10 - INFO - uvicorn.error - Started server process [7]
+2025-07-04 20:12:10 - INFO - uvicorn.error - Waiting for application startup.
+2025-07-04 20:12:10 - INFO - uvicorn - Starting app
+2025-07-04 20:12:11 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-07-04 20:12:12 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-07-04 20:12:12 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-07-04 20:12:13 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-07-04 20:12:13 - INFO - uvicorn - Loading 1000 users completed
+2025-07-04 20:12:13 - INFO - uvicorn.error - Application startup complete.
+2025-07-04 20:12:13 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-07-04 20:12:35 - INFO - uvicorn - Successfully fetched 100/24026 users
+2025-07-04 20:12:35 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 20:12:37 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-04 20:12:37 - INFO - uvicorn - Returning data from cache
+2025-07-04 20:12:48 - INFO - uvicorn - Successfully fetched 100/24026 users
+2025-07-04 20:12:48 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 20:12:50 - INFO - uvicorn - User profile request for ID: 2 from 172.31.0.5
+2025-07-04 20:12:50 - INFO - uvicorn - Returning data from cache
+2025-07-04 20:13:23 - INFO - uvicorn - Successfully fetched 100/24026 users
+2025-07-04 20:13:23 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 20:13:54 - INFO - uvicorn - User profile request for ID: 6 from 172.31.0.5
+2025-07-04 20:13:54 - INFO - uvicorn - Successfully retrieved user ID: 6
+2025-07-04 20:14:02 - INFO - uvicorn - Successfully fetched 100/24026 users
+2025-07-04 20:14:02 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 20:14:04 - INFO - uvicorn - User profile request for ID: 6 from 172.31.0.5
+2025-07-04 20:14:04 - INFO - uvicorn - Returning data from cache
+2025-07-04 20:14:42 - INFO - uvicorn - Successfully fetched 100/24026 users
+2025-07-04 20:14:42 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-04 20:18:25 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-04 20:18:25 - INFO - uvicorn - Returning data from cache
+2025-07-05 18:21:50 - INFO - uvicorn - Database engine created successfully
+2025-07-05 18:21:50 - INFO - uvicorn.error - Started server process [7]
+2025-07-05 18:21:50 - INFO - uvicorn.error - Waiting for application startup.
+2025-07-05 18:21:50 - INFO - uvicorn - Starting app
+2025-07-05 18:21:51 - INFO - uvicorn - Starting user loading process. Total: 1000, batch size: 5000
+2025-07-05 18:21:52 - INFO - uvicorn - Successfully fetched 1000 users from API, page 1
+2025-07-05 18:21:52 - INFO - uvicorn - Successfully fetched page 1: 1000 users
+2025-07-05 18:21:54 - INFO - uvicorn - User loading completed. Total added: 1000
+2025-07-05 18:21:54 - INFO - uvicorn - Loading 1000 users completed
+2025-07-05 18:21:54 - INFO - uvicorn.error - Application startup complete.
+2025-07-05 18:21:54 - INFO - uvicorn.error - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-07-05 18:22:00 - INFO - uvicorn - Successfully fetched 100/25026 users
+2025-07-05 18:22:00 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-05 18:22:02 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-05 18:22:02 - INFO - uvicorn - Successfully retrieved user ID: 1
+2025-07-05 18:22:19 - INFO - uvicorn - Successfully fetched 100/25026 users
+2025-07-05 18:22:19 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-05 18:22:21 - INFO - uvicorn - User profile request for ID: 1 from 172.31.0.5
+2025-07-05 18:22:21 - INFO - uvicorn - Returning data from cache
+2025-07-05 18:22:32 - INFO - uvicorn - Successfully fetched 100/25026 users
+2025-07-05 18:22:32 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-05 18:22:33 - INFO - uvicorn - User profile request for ID: 2 from 172.31.0.5
+2025-07-05 18:22:33 - INFO - uvicorn - Successfully retrieved user ID: 2
+2025-07-05 18:22:33 - INFO - uvicorn - Successfully fetched 100/25026 users
+2025-07-05 18:22:33 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-05 18:22:34 - INFO - uvicorn - User profile request for ID: 2 from 172.31.0.5
+2025-07-05 18:22:34 - INFO - uvicorn - Returning data from cache
+2025-07-05 18:22:35 - INFO - uvicorn - Successfully fetched 100/25026 users
+2025-07-05 18:22:35 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-05 18:22:37 - INFO - uvicorn - User profile request for ID: 3 from 172.31.0.5
+2025-07-05 18:22:37 - INFO - uvicorn - Successfully retrieved user ID: 3
+2025-07-05 18:22:38 - INFO - uvicorn - Successfully fetched 100/25026 users
+2025-07-05 18:22:38 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-05 18:22:39 - INFO - uvicorn - User profile request for ID: 3 from 172.31.0.5
+2025-07-05 18:22:39 - INFO - uvicorn - Returning data from cache
+2025-07-05 18:22:40 - INFO - uvicorn - Successfully fetched 100/25026 users
+2025-07-05 18:22:40 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-05 18:27:24 - INFO - uvicorn - User profile request for ID: 9 from 172.31.0.5
+2025-07-05 18:27:24 - INFO - uvicorn - Successfully retrieved user ID: 9
+2025-07-05 18:27:25 - INFO - uvicorn - Successfully fetched 100/25026 users
+2025-07-05 18:27:25 - INFO - uvicorn - Successfully returned 100 users (page 1)
+2025-07-05 18:27:28 - INFO - uvicorn - User profile request for ID: 9 from 172.31.0.5
+2025-07-05 18:27:28 - INFO - uvicorn - Returning data from cache
+2025-07-05 18:27:29 - INFO - uvicorn - Successfully fetched 100/25026 users
+2025-07-05 18:27:29 - INFO - uvicorn - Successfully returned 100 users (page 1)
