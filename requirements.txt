@@ -18,3 +18,5 @@ pytest-mock==3.14.0
 redis==6.2.0
 aioredis>=2.0.1
 async-timeout==5.0.1
+celery==5.4.0
+python-telegram-bot==22.2

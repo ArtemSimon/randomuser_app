@@ -13,6 +13,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from app.core.redis import get_redis
 from redis.asyncio import Redis
 from fastapi.encoders import jsonable_encoder
+from app.celery.task_celery import load_users_task
 
 router = APIRouter()
 
@@ -78,6 +79,9 @@ async def load_user_random(
 
         logger.info(f"Successfully loaded {user_count} users")
         logger.debug(f"Load operation completed for {count} requested users")
+        
+        task = load_users_task.delay()
+        print(f'status: Задача запущена,{task}')
         
         return user_count
     

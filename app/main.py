@@ -1,3 +1,4 @@
+import asyncio
 from contextlib import asynccontextmanager
 from app.api.router import router as router_randomuser
 from app.database import create_tables
@@ -11,6 +12,7 @@ from fastapi import FastAPI,Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.config import logger
 from app.core.redis import get_redis
+from app.core.subscriber import listen_events
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -22,11 +24,29 @@ async def lifespan(app: FastAPI):
         start_app = UserApi(session)
         await start_app.async_load_user(1000)
         logger.info('Loading 1000 users completed')
-
-    # Приложение работает
-    yield {'redis':redis}
     
-    await redis.close()
+    
+    listener_task = asyncio.create_task(listen_events())
+    logger.info('Redis listener started in background')
+
+    try:
+        # 4. Передаем управление приложению
+        yield {'redis': redis}
+    finally:
+        # 5. Очистка ресурсов при завершении
+        logger.info('Stopping application...')
+        listener_task.cancel()
+        try:
+            await listener_task
+        except asyncio.CancelledError:
+            logger.info('Redis listener stopped gracefully')
+        await redis.close()
+
+        
+    # # Приложение работает
+    # yield {'redis':redis}
+    
+    # await redis.close()
 
 
 

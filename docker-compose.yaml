@@ -3,7 +3,9 @@ services:
 
   # сервис приложения
   fast_api_app: 
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     # image: fast_api_app:1
     container_name: fast_api_app
     env_file: "randomuser.env"
@@ -82,7 +84,19 @@ services:
     networks:
         randomuser_network:
           aliases: [redis_randomuser]
-
+  celery_randomuser:
+    container_name: celery_randomuser
+    build:
+      context: .
+      dockerfile: Dockerfile.celery
+    depends_on:
+      - redis_randomuser
+    env_file: "randomuser.env"
+    command: celery -A app.celery.task_celery worker --pool=solo --loglevel=info
+    networks:
+      randomuser_network:
+        aliases: [celery_randomuser]
+        
 volumes:
   redis_data:
   pg_randomuser_data:
